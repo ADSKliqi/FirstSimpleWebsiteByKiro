@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Weather Forecast</h1>
+        </header>
+
+        <main class="main-content">
+            <!-- Search Interface Section -->
+            <section class="search-section" aria-label="Location Search">
+                <div id="search-container">
+                    <!-- SearchInterface component will populate this -->
+                </div>
+            </section>
+
+            <!-- Current Weather Section -->
+            <section class="current-weather-section" aria-label="Current Weather">
+                <div id="current-weather-container">
+                    <!-- CurrentWeatherDisplay component will populate this -->
+                </div>
+            </section>
+
+            <!-- Forecast Section -->
+            <section class="forecast-section" aria-label="5-Day Forecast">
+                <div id="forecast-container">
+                    <!-- ForecastDisplay component will populate this -->
+                </div>
+            </section>
+
+            <!-- Error Display Section -->
+            <section class="error-section" aria-label="Error Messages">
+                <div class="error-container">
+                    <div class="error-message" role="alert" aria-live="polite">
+                        <div class="error-icon" aria-hidden="true">⚠️</div>
+                        <div class="error-text"></div>
+                        <button type="button" class="retry-btn">Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div class="loading-overlay" aria-hidden="true">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Loading weather data...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Load all JavaScript modules -->
+    <script src="js/models/WeatherDataModel.js"></script>
+    <script src="js/utils/ErrorHandler.js"></script>
+    <script src="js/services/LocationService.js"></script>
+    <script src="js/services/WeatherService.js"></script>
+    <script src="js/components/SearchInterface.js"></script>
+    <script src="js/components/CurrentWeatherDisplay.js"></script>
+    <script src="js/components/ForecastDisplay.js"></script>
+    <script src="js/WeatherApp.js"></script>
+    <script src="js/index.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
